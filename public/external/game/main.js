@@ -3,19 +3,19 @@ var app = angular.module("Main", ['GameService']);
 app.config(function($routeProvider) {
     $routeProvider   
         .when('/', {
-           templateUrl: "intro"     
+            templateUrl: "partials/intro" 
         })
         .when('/comein', { 
-           templateUrl: "comein"     
+            templateUrl: "partials/comein"     
         })
         .when('/oath', { 
-           templateUrl: "oath"     
+            templateUrl: "partials/oath"     
         })
         .when('/oath_conclusion', { 
-           templateUrl: "oath_conclusion"     
+            templateUrl: "partials/oath_conclusion"     
         })
         .when('/game', { 
-           templateUrl: "game"     
-         , controller: "GameCtrl"
+            templateUrl: "partials/game"     
+          , controller: "GameCtrl"
         })
 });

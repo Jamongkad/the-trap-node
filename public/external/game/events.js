@@ -1,6 +1,5 @@
 var Events = {
-    init: function() {
-        
+    init: function() {        
         $("a.collect").bind("click", function(e) {
             var me = $(this);
             var btn = new Button({
