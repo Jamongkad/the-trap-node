@@ -1,0 +1,12 @@
+div.cooldown {
+    background-color: #DDDDDD;
+    top: 0;
+    z-index: -1;
+}
+
+#someDiv{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}

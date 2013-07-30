@@ -1,0 +1,27 @@
+Intro
+    * Character Selection
+    * Alignment 
+    * Introduce Character
+    * Introduce background
+    * Introduce family advisor
+        * Ask for brief history of land.
+            * Yes
+                * Introduce Nomeria history
+            * No
+                * Proceed to game ui
+    * Game UI
+        - Kingdom Notification
+            - Local 
+            - World
+        - Vassal Menu
+            - Strength
+            - Loyalty
+        - Show family funds, reputation, court influence, power
+        - Show Lord Title (starting Lord Almasy up to Crown Advisor)
+        - Conquered vassals
+        - Township readout
+        - Subterfuge Menu (Order of the Crimson Blade)
+            - Assassin Menu
+                 - Assassin Pool
+            - Espionage Menu
+                 - Spy Pool
