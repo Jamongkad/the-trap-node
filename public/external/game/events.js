@@ -1,6 +1,7 @@
 var Events = {
     init: function() {        
         $("a.collect").bind("click", function(e) {
+                     
             var me = $(this);
             var btn = new Button({
                 elem: me     
@@ -11,11 +12,47 @@ var Events = {
               , cooldown: 10
             });
             btn.activate();
+
+            showPrevious($('ul#notification'));
+            $("#notification").append("<li style='display:none'>You collected from your vassals. " + makeid() + "</li>");
             e.preventDefault();
         });
     }
 }
 
+function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ ) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));    
+    }
+
+    return text;
+}
+
+var from = 0, step = 5;
+
+function showNext(list) {
+    list
+        .find('li').hide().end()
+        .find('li:lt(' + (from + step) + '):not(li:lt(' + from + '))')
+        .show();
+            from += step;
+}
+
+function showPrevious(list) {
+    from -= step;
+    list
+        .find('li').hide().end()
+        .find('li:lt(' + from + '):not(li:lt(' + (from - step) + '))')
+        .show();
+}
+
+showPrevious($('ul#notification'));
+
+// show initial set
+// 
 /*
 var progress = $('<div id="progressbar" style="width:60px;"></div>');
 

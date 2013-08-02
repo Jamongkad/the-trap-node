@@ -8,14 +8,12 @@ function Button(options) {
     this.activate = function() { 
         var cd = this.options.cooldown;
         var width = $(this.options.elem).width();
-        var current_width = '50%';//width + "px";
+        var current_width = '40%';//width + "px";
         var target_width = '0%';
         var text = this.options.text;
         var actiontext = this.options.actiontext;
 
         var that = this;
-
-        console.log(current_width);
          
         if(!this.options.elem.hasClass("disabled")) { 
             this.options.elem

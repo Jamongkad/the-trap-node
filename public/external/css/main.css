@@ -10,3 +10,21 @@ div.cooldown {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+div#notifyGradient { 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	background: -webkit-linear-gradient(
+		rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%
+	);
+	background: linear-gradient(
+		rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%
+	);
+	filter: alpha(
+		Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=500
+	);
+}
