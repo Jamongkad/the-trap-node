@@ -25,3 +25,32 @@ Intro
                  - Assassin Pool
             - Espionage Menu
                  - Spy Pool
+
+Gameplay
+    * Start with 2 Vassals
+	* Gold 1000
+	* 1 Vassal becoming disgruntled.
+	* 1 Vassal submissive.
+	* Try collecting from Vassals.
+	    * Prompt that one Vassal refuses tribute.
+		    * Punish them...
+			    * Look at army strength
+				    * Intimidate with Army (compare army strength to vassal army)
+					    * Vassal has no army because of War. Bring up Elven war
+						Story arc. Vassals will fear the threat of an army and
+						they will comply.
+				* Use Espionage
+				    * Look at Blades...
+					    * No assassins? Bring up Crimson Blade Story Arc. Return
+						to collecting.
+			* Try Diplomacy...
+			    * Look as diplomacy score...
+				    * Bring up Almasy Family History Arc (Lords of the Lower
+					Chamber). Return to collecting.
+		* Vassals comply!
+		    * Collect 250 gold from each.
+			* Move forward with story (Family dishonored, plot the rise of
+			Almasy family, start recruiting blades, start building army)
+	* Crimson Blade Recruitment.
+	    * Assassin or Spy 
+
