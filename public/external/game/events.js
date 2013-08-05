@@ -9,12 +9,11 @@ var Events = {
               , actiontext: 'collecting'
               , action: function() { console.log("update world engine"); }
               , afteraction: function() { console.log("after update world engine"); }
-              , cooldown: 10
+              , cooldown: 3
             });
             btn.activate();
 
-            showPrevious($('ul#notification'));
-            $("#notification").append("<li style='display:none'>You collected from your vassals. " + makeid() + "</li>");
+            var ntf = new Notifications({msg: "You collected from your vassals. " + makeid() });
             e.preventDefault();
         });
     }

@@ -1,36 +1,29 @@
-/*
-var Notifications = {
-    friends: FixedQueue(3, ["Mathew", "Dan", "Pwet", "John"])
-}
-*/
+function Notifications(options) {
 
-function FixedQueue (size) {
-    this.size = size;
-    this.initialvalues = [];
-}
+    this.options = options;
+    this.element = $("#notification");
 
-FixedQueue.prototype.add = function(element) {
-    this.initialvalues.unshift(element);
-    console.log(this.initialvalues);
-    if(this.initialvalues.length > this.size) {
-        console.log("Pop");
-        this.initialvalues.pop();
-        console.log(this.initialvalues);
+    this.message = function() {
+        if(this.is_array(this.options.msg)) {
+            for(var i=0;i<this.options.msg.length;i++)  {
+                this.element.append("<li>" + this.options.msg[i] + "</li>");      
+            }
+        } else {
+            this.element.prepend("<li>" + this.options.msg + "</li>");     
+        }
+       
+        if(this.element.height() >= 500) {
+            $("#notification li:last-child").remove();
+        }
     }
-}
-
-FixedQueue.prototype.trimHead = function() {
-    if(this.length <= this.fixedSize) {
-        return; 
+    
+    this.clean = function() {
+        this.element.chidren().remove();
     }
 
-    Array.prototype.splice.call(this, 0, (this.length - this.fixedSize));
-}
-
-FixedQueue.prototype.trimTail = function() {
-    if(this.length <= this.fixedSize) {
-        return;     
+    this.is_array = function(obj) {
+       return $.isArray(obj);
     }
 
-    Array.prototype.splice.call(this, this.fixedSize, (this.length - this.fixedSize));
+    this.message();
 }
