@@ -5,17 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="external/css/bootstrap.css" rel="stylesheet">
-        <link href="external/css/bootstrap-cyborg.min.css" rel="stylesheet">
-        <link href="external/css/bootstrap-responsive.css" rel="stylesheet">
         <link href="external/css/jquery-ui.css" rel="stylesheet">
         <link href="external/css/main.css" rel="stylesheet">
 
         <script src="external/js/jquery-1.10.2.js"></script>
-        <script src="external/js/gqueue-1.3.js"></script>
-
         <script src="external/js/angular.js"></script>
         <script src="external/js/bootstrap.js"></script>
-
+        <script src="external/js/angular.compilehtml.js"></script>
         <script src="external/game/world.js"></script>
         <script src="external/game/notifications.js"></script>
         <script src="external/game/button.js"></script>
@@ -26,33 +22,33 @@
         <script src="external/game/main.js"></script>
 
         <script src="external/game/controllers/gamectrl.js"></script>
+        <script src="external/game/controllers/storyctrl.js"></script>
+        <script src="external/game/controllers/visitorctrl.js"></script>
         <script src="external/game/services/gameservice.js"></script>
+        <script src="external/game/services/templateservice.js"></script>
+        <script src="external/game/services/currencyflow.js"></script>
+        <script src="external/game/directives/gameview.js"></script>
+        <script src="external/game/directives/nav.js"></script>
 
         <style>
             body {
                 padding-top: 60px;     
             }
         </style>
+
     </head>
-    <body ng-app="Main">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="#">The Trap</a>
-                    <!--
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    -->
+    <body ng-app="Main"> 
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">The Trap</a>
+                </div>
+
+                <div id="navbar-main" class="navbar-collapse collapse">
+                   <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#game" mainnav>Game</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

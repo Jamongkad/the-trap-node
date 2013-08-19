@@ -29,8 +29,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/partials/:filename', routes.partials);
 app.get('/', routes.index);
+app.get('/partials/:filename', routes.partials);
+app.get('/test', routes.test);
+app.get('/visitor', user.visitor);
+app.get('/visitor/:id/speak', user.speak);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

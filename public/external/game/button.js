@@ -1,4 +1,5 @@
 function Button(options) {
+    
     this.options = options;    
 
     if(typeof this.options.action == 'function') {

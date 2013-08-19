@@ -26,7 +26,7 @@ Intro
             - Espionage Menu
                  - Spy Pool
 
-Gameplay
+Gameplay (Prototype One)
     * Start with 2 Vassals
 	* Gold 1000
 	* 1 Vassal becoming disgruntled.
@@ -54,3 +54,8 @@ Gameplay
 	* Crimson Blade Recruitment.
 	    * Assassin or Spy 
 
+
+Gameplay (Prototype Two)
+    * Papers please like gameplay. In fact make it a Lord simulator. People come
+	into your hall everyday to press their daily duties upon you. It is up to
+	you help them through their daily woes.
