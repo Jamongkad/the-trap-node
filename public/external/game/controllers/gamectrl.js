@@ -17,6 +17,5 @@ function GameCtrl($scope, GameService, CurrencyFlow) {
         var add_gold = CurrencyFlow.amt;
         $scope.gold += add_gold;
         $scope.$apply();
-    });
-     
+    });     
 }

@@ -34,6 +34,7 @@ app.get('/partials/:filename', routes.partials);
 app.get('/test', routes.test);
 app.get('/visitor', user.visitor);
 app.get('/visitor/:id/speak', user.speak);
+app.get('/visitor/test', user.test);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

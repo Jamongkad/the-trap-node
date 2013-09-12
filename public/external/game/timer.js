@@ -13,4 +13,5 @@ function Timer(callback, delay) {
     };
 
     this.resume();        
+
 }

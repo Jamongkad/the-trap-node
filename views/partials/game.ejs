@@ -1,57 +1,82 @@
+<!--
 <div class="subnav">
     <ul class="nav nav-pills">
         <li><a href="#game" nav switch="manor">Manor</a></li>
         <li><a href="#vogelstead" nav switch="vogel">Vogelstead</a></li>
     </ul>
 </div>
+-->
 
 <div class="row"> 
     <gameview> 
-        <div class="col-xs-12 col-sm-6 col-md-8 manor" ng-controller="GameCtrl">
-            <h2>Manor</h2>
-            <div>Gold: {{gold}}</div>
-            <div>Crops: {{gold}}</div>
-            <div>Harvest: {{gold}}</div>
-            <div>Supplies: {{gold}}</div>
-            <br/>
-            
-            <h2>Audience</h2>
+        <div class="col-md-3 manor" ng-controller="GameCtrl"> 
+            <h4>Anomaly List</h4>
             <visitor>
-                <div ng-show="name" class="well">
+                <div ng-show="person" class="well">
                     <button type="button" class="close badge" aria-hidden="true" ng-click="close()" close-dialog>x</button>
-                    <h4>{{name}} says...</h4>
-                    <p>My Lord...[text goes here]</p>
+                    <h4>{{person.name}} says...</h4>
+                    <p>{{person.request}}</p>
+                    <div id="dialog"></div>
+                    <button class="btn btn-xs btn-primary" ng-click="inquire()">Inquire</button>
+                    <button class="btn btn-xs btn-success">Accept</button>
+                    <button class="btn btn-xs btn-danger">Reject</button>
                 </div>
-                <table class="table">
-                    <tr ng-repeat="visitor in visitors">
-                        <td>{{visitor.name}}</td>
-                        <td><a href="#" ng-click="talk(visitor.name)" speak>speak to...</a></td>
-                        <td><a href="#" ng-click="talk(visitor.name)">reject...</a></td> 
-                    </tr> 
-                </table>
+
+                <div ng-repeat="visitor in visitors" class="panel panel-default" anomalies style="z-index:3000">
+
+                    <div class="panel-heading">{{visitor.name}}</div>
+                    <div class="panel-body"><a href="#" ng-click="talk(visitor.name)" speak>process</a></div>
+                    <!--<a href="#" ng-click="reject()" reject>reject...</a>-->
+
+                </div> 
+
             </visitor>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-8  vogel" style="display: none">
-            <h1>Vassals</h1>
-            <ul class="list-unstyled">
-                <li><h3>Eigen</h3>
-                    <ul>
-                        <li><button type="button" class="btn btn-primary btn-xs collect" href="#" collect>collect tribute</button></li> 
-                    </ul>
-                </li>
-                <li><h3>Arnheard</h3>
-                    <ul>
-                        <li><button type="button" class="btn btn-primary btn-xs collect" href="#" collect>collect tribute</button></li> 
-                    </ul>
-                </li> 
-            </ul>
-        </div>
     </gameview>
-
-    <div class="col-xs-6 col-sm-6 col-md-4 well">
-        <p class="text-info game-msg fill">
-            <ul id="notification" class="list-unstyled"></ul>
-            <!--<div id="notifyGradient"></div>-->
-        </p>
+     
+    <h4>Work Area</h4>
+    <div class="col-md-9 well">
+        <div class="col-md-3">
+            Category
+            <select name="category" class="form-control">
+                <option>Safe</option> 
+                <option>Euclid</option> 
+                <option>Keter</option> 
+                <option>Anomalous</option> 
+            </select> 
+        </div>
+        <div class="col-md-4"> 
+            Containment Procedure
+            <select name="containment" class="form-control">
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+            </select> 
+        </div>
+        <div class="col-md-4"> 
+            Containment Procedure
+            <select name="containment" class="form-control">
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+                <option>Anomalous</option> 
+            </select> 
+        </div>
     </div>
+
+    <dropzone class="col-md-9 jumbotron">
+        <center>Drop Here</center>
+    </dropzone>
 </div>
+
+        <!-- 
+        <div class="col-md-3">
+            <p class="text-info game-msg well">
+                <ul id="notification" class="list-unstyled">
+                    <li>Mathew</li> 
+                </ul>
+            </p>
+        </div>
+        -->
+       

@@ -1,6 +1,6 @@
 function VisitorCtrl($scope) {
 
-    $scope.name, $scope.occupation;
+    $scope.person;
 
     $scope.talk = function(name) {
         console.log("Talking...to " + name);
@@ -10,14 +10,21 @@ function VisitorCtrl($scope) {
           , url: '/visitor/' + name + '/speak'
           , success: function(data) {   
                 $scope.$apply(function() { 
-                    $scope.name = data.name;
-                    $scope.occupation = data.occupation;
+                    $scope.person = data;
                 });
             }
         });
     }
 
+    $scope.inquire = function() {
+        console.log($scope.person);
+    }
+
+    $scope.reject = function() {
+        console.log("rejecting");
+    }
+
     $scope.close = function() {
-        $scope.name = false;     
+        $scope.person = false;     
     }
 }
