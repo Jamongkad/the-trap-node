@@ -1,15 +1,24 @@
+<div class="subnav"> 
 <!--
-<div class="subnav">
-    <ul class="nav nav-pills">
+    <ul class=""> 
         <li><a href="#game" nav switch="manor">Manor</a></li>
         <li><a href="#vogelstead" nav switch="vogel">Vogelstead</a></li>
+
     </ul>
-</div>
 -->
+
+<button class="btn btn-default" type="button" show-classifier>Process</button>
+</div>
 
 <div class="row"> 
     <gameview> 
         <div class="col-md-3 manor" ng-controller="GameCtrl"> 
+            <h4>Notifications</h4>
+            <div class="well">
+                <ul id="notification" class="list-unstyled">
+                    <li>Mathew</li> 
+                </ul>
+            </div>
             <h4>Anomaly List</h4>
             <visitor>
                 <div ng-show="person" class="well">
@@ -22,19 +31,17 @@
                     <button class="btn btn-xs btn-danger">Reject</button>
                 </div>
 
-                <div ng-repeat="visitor in visitors" class="panel panel-default" anomalies style="z-index:3000">
-
-                    <div class="panel-heading">{{visitor.name}}</div>
+                <div ng-repeat="visitor in visitors" class="panel panel-default" anomalies style="z-index:1000">
+                    <div class="panel-heading" anomaly-name="{{visitor.name}}">{{visitor.name}}</div>
                     <div class="panel-body"><a href="#" ng-click="talk(visitor.name)" speak>process</a></div>
                     <!--<a href="#" ng-click="reject()" reject>reject...</a>-->
-
                 </div> 
 
             </visitor>
         </div>
     </gameview>
-     
     <h4>Work Area</h4>
+    <!-- 
     <div class="col-md-9 well">
         <div class="col-md-3">
             Category
@@ -64,19 +71,13 @@
             </select> 
         </div>
     </div>
+    -->
 
     <dropzone class="col-md-9 jumbotron">
-        <center>Drop Here</center>
+        <center>drop file here</center>
     </dropzone>
 </div>
 
         <!-- 
-        <div class="col-md-3">
-            <p class="text-info game-msg well">
-                <ul id="notification" class="list-unstyled">
-                    <li>Mathew</li> 
-                </ul>
-            </p>
-        </div>
         -->
        

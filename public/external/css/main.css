@@ -28,3 +28,24 @@ div#notifyGradient {
 		Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=500
 	);
 }
+
+div.subnav {
+    position:fixed;    
+    right:0;
+    top:30%;
+    margin-top: -2.5em;
+    z-index:1000;
+}
+
+@media (max-width: 767px) {
+    div.subnav {
+        position:static;     
+        width:auto;
+    }
+}
+
+@media (max-width: 979px) {
+    div.subnav {
+        top:70px;
+    }
+}
