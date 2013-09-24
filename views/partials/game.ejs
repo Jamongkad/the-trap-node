@@ -31,9 +31,9 @@
                     <button class="btn btn-xs btn-danger">Reject</button>
                 </div>
 
-                <div ng-repeat="visitor in visitors" class="panel panel-default" anomalies style="z-index:1000">
-                    <div class="panel-heading" anomaly-name="{{visitor.name}}">{{visitor.name}}</div>
-                    <div class="panel-body"><a href="#" ng-click="talk(visitor.name)" speak>process</a></div>
+                <div ng-repeat="anomaly in anomalylist" class="panel panel-default" anomalies style="z-index:1000">
+                    <div class="panel-heading" anomaly-id="{{anomaly.id}}">Report #{{anomaly.title}}</div>
+                    <div class="panel-body"><a href="#" ng-click="talk(anomaly.id)" speak>process</a></div>
                     <!--<a href="#" ng-click="reject()" reject>reject...</a>-->
                 </div> 
 

@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , crawler = require('./routes/crawler')
   , http = require('http')
   , path = require('path');
 
@@ -33,8 +34,8 @@ app.get('/', routes.index);
 app.get('/partials/:filename', routes.partials);
 app.get('/test', routes.test);
 app.get('/visitor', user.visitor);
-app.get('/visitor/:id/speak', user.speak);
-app.get('/visitor/test', user.test);
+app.get('/visitor/:id', user.speak);
+app.get('/crawler/index', crawler.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

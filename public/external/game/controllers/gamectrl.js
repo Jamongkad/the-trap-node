@@ -1,21 +1,16 @@
 function GameCtrl($scope, GameService, CurrencyFlow) {
 
     GameService.init();
-    $scope.gold = 16;
 
     $.ajax({
         type: 'GET'    
       , dataType: 'json' 
-      , url: '/visitor'
+      , url: '/crawler/index'
       , success: function(data) {   
-            $scope.visitors = data;
-            $scope.$apply($scope.visitors);
+            //$scope.visitors = data;
+            $scope.anomalylist = data;
+            $scope.$apply($scope.anomalylist);
         }
     });
 
-    $scope.$on('setGold', function() {
-        var add_gold = CurrencyFlow.amt;
-        $scope.gold += add_gold;
-        $scope.$apply();
-    });     
 }

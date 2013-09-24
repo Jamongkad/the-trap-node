@@ -9,14 +9,12 @@ angular.module('Nav', [])
                 '<option>Safe</option>' + 
                 '<option>Euclid</option>' + 
                 '<option>Keter</option>' + 
-                '<option>Anomalous</option>' + 
                 '</select><br/>' +
                 "Category" + 
                 '<select name="category" class="form-control">' + 
                 '<option>Safe</option>' + 
                 '<option>Euclid</option>' + 
                 '<option>Keter</option>' + 
-                '<option>Anomalous</option>' + 
                 '</select><br/>' + 
                 'Containment Procedure<textarea id="textArea" class="form-control" rows="10"></textarea>'
 
